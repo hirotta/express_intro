@@ -14,7 +14,7 @@ router.post("/", async(req, res)=>{
 	axios.get(url)
 		.then(function(response){
 			res.render("postcode_form", {address:response.data});
-			console.log(response);
+			console.log(response.status);
 		})
 		.catch(function(error){
 			console.log(error);
