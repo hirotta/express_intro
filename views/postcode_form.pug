@@ -2,14 +2,14 @@ extends layout
 
 block content 
 	h1 #{title}
+	p
+		form(method="post") 
+			.form
+				label(for='postcode') 郵便番号:
+				input(type="text", placeholder='8130017' name='postcode')
+			button.btn.btn-primary(type='submit') 変換
 
-	form(method="post") 
-		.form
-			label(for='postcode') 郵便番号:
-			input#name.form-control(type="text", placeholder='8130017' name='postcode')
-		button.btn.btn-primary(type='submit') 変換
-
-	h2 住所：#{address}
+	p 住所：#{address}
 	
 	if errors 
 		ul 
